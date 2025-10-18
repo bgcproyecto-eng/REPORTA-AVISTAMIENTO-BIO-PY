@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportar Avistamiento - BIO PY</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: forestgreen; no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      padding: 25px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      color: #E8F5E9;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"], textarea, input[type="file"] {
+      width: 100%;
+      margin-top: 5px;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      background-color: #f4f4f4;
+      font-family: inherit;
+      font-size: 0.9em;
+    }
+
+    textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    .boton {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: beige;
+      border: none;
+      padding: 12px;
+      border-radius: 12px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .boton:hover {
+      background-color: #45a049;
+    }
+
+    .volver {
+      margin-top: 15px;
+      background-color: #ff9800;
+    }
+
+    .volver:hover {
+      background-color: #e68900;
+    }
+
+    .upload-box {
+      margin-top: 10px;
+      background-color: #ffffffc7;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>¡Reporta tu avistamiento!</h1>
+    <form>
+      <label for="descripcion">Descripción del avistamiento:</label>
+      <textarea id="descripcion" placeholder="Ejemplo: Vi un tucán cerca del río Paraguay..."></textarea>
+
+      <label for="ubicacion">Ubicación (opcional):</label>
+      <input type="text" id="ubicacion" placeholder="Ejemplo: Asunción, Parque Ñu Guasu">
+
+      <label for="archivo">Subir foto o video:</label>
+      <div class="upload-box">
+        <input type="file" id="archivo" accept="image/*,video/*" multiple>
+      </div>
+
+      <button class="boton" type="submit">ENVIAR REPORTE</button>
+      <button class="boton volver" type="button" onclick="history.back()">VOLVER</button>
+    </form>
+  </div>
+</body>
+</html>
